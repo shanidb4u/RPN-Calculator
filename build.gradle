@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id  'idea'
+}
+
+group 'com.anz'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'RpnCalculatorApplication'
+    }
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+    testCompile "org.codehaus.groovy:groovy-all:2.4.4"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+}
